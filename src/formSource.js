@@ -1,3 +1,4 @@
+const $ = window.$;
 export const userInputs = [
     {
       id: "userName",
@@ -28,11 +29,16 @@ export const userInputs = [
       label: "Mật khẩu",
       type: "password",
     },
+    
     {
       id: "position",
       label: "Vị trí làm việc",
-      type: "text",
-      placeholder: "vd: Designer",
+       options: [
+      { value: "designer", label: "Designer" },
+      { value: "developer", label: "Developer" },
+      { value: "manager", label: "Manager" },
+      { value: "marketing", label: "Marketing" },
+    ],
     },
     {
       id: "address",
@@ -43,36 +49,49 @@ export const userInputs = [
    
   ];
   
-  export const productInputs = [
+//   $("#position").replaceWith('<select id="position" name="position" class="ProductDetailsQuantityTextBox">' +
+//   '<option value="1">1</option>' +
+//   '<option value="2">2</option>' +
+//   '<option value="3">3</option>' +
+//   '<option value="4">4</option>' +
+//   '<option value="5">5</option>' +
+// '</select>');
+  export const projectInputs = [
     {
-      id: 1,
-      label: "Title",
+      id: "projectName",
+      label: "Tên dự án",
       type: "text",
-      placeholder: "Apple Macbook Pro",
+      placeholder: "",
     },
     {
-      id: 2,
-      label: "Description",
+      id: "projectDetails",
+      label: "Mô tả",
       type: "text",
-      placeholder: "Description",
+      placeholder: "",
     },
     {
-      id: 3,
-      label: "Category",
+      id: "projectManager",
+      label: "Người quản lý",
       type: "text",
-      placeholder: "Computers",
+      placeholder: "",
     },
     {
-      id: 4,
-      label: "Price",
-      type: "text",
-      placeholder: "100",
+      id:"startDate",
+      label: "Ngày bắt đầu",
+      type: "date",
+      placeholder: "",
     },
     {
-      id: 5,
-      label: "Stock",
+      id: "dueDate",
+      label: "Ngày đến hạn",
       type: "text",
-      placeholder: "in stock",
+      placeholder: "",
+    },
+    {
+      id: "status",
+      label: "Trạng thái",
+      type: "date",
+      placeholder: "",
     },
   ];
   

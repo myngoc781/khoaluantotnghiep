@@ -27,9 +27,6 @@ const Datatable = () => {
     };
   }, []);
   console.log(data);
-  // const handleDelete = (id) => {
-  //   setData(data.filter((item) => item.id !== id));
-  // };
   const handleDelete = (id) => {
     const docRef = doc(db, "users", id);
     deleteDoc(docRef)

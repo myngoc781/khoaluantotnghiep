@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { auth } from "../../firbase";
 import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import CreateProject from "../../pages/createproject/CreateProject";
 
 const Sidebar = () => {
   const { dispatch } = useContext(AuthContext);
@@ -48,7 +49,7 @@ const Sidebar = () => {
               <span>Người dùng</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/projects" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
               <span>Dự án</span>
